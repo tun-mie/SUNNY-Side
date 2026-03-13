@@ -1,163 +1,350 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunnyside</title>
-<link rel="stylesheet" href="styles.css">
-</head>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<body>
+body{
+font-family:'Barlow',sans-serif;
+}
 
-<header class="hero">
-<div class="navbar">
-<h2 class="logo">sunnyside</h2>
+.hero{
+height:100vh;
+background:url(images/image-header.jpg) center/cover no-repeat;
+position:relative;
+color:white;
+}
 
- <div class="menu-toggle" id="menu-toggle">
-      <img src="images/icon-hamburger.svg" alt="menu">
-    </div>
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:40px 60px;
+}
 
-<ul class="nav-links">
-<li><a href="www.sunnyside.com/about">About</a></li>
-<li><a href="www.sunnyside.com/services">Services</a></li>
-<li><a href="www.sunnyside.com/projects">Projects</a></li>
-<li><a href="www.sunnyside.com/contacts"><button class="contact">CONTACT</button></li></a>
-</ul>
-</div>
+.logo{
+font-family:'Fraunces';
+font-weight:900;
+}
 
-<div class="hero-content">
-<h1>WE ARE CREATIVES</h1>
-<img src="images/icon-arrow-down.svg" class="arrow">
-</div>
-</header>
+.menu-toggle{
+display:none;
+}
 
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+align-items:center;
+}
 
-<div class="grid">
+.nav-links a{
+text-decoration:none;
+color:white;
+}
 
-<div class="text-block">
-<h2>Transform your brand</h2>
-<p>
-We are a full-service creative agency specializing in helping brands grow fast.
-Engage your clients through compelling visuals that do most of the marketing for you.
-</p>
-<a href="#">LEARN MORE</a>
-</div>
+.contact{
+padding:12px 25px;
+border-radius:25px;
+border:none;
+background:white;
+font-weight:bold;
+}
 
-<div class="image-block egg"></div>
+.hero-content{
+position:absolute;
+top:40%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+}
 
-<div class="image-block cup"></div>
+.hero h1{
+font-family:'Fraunces';
+letter-spacing:8px;
+font-size:50px;
+}
 
-<div class="text-block">
-<h2>Stand out to the right audience</h2>
-<p>
-Using a collaborative formula of designers, researchers, photographers,
-videographers, and copywriters, we’ll build and extend your brand in digital places.
-</p>
-<a href="#">LEARN MORE</a>
-</div>
+.arrow{
+margin-top:40px;
+}
 
-</div>
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
 
+.text-block{
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:100px;
+}
 
-<div class="services">
+.text-block h2{
+font-family:'Fraunces';
+font-size:35px;
+margin-bottom:20px;
+}
 
-<div class="service graphic">
-<div class="service-content">
-<h3>Graphic Design</h3>
-<p>
-Great design makes you memorable. We deliver artwork that underscores your brand
-message and captures potential clients’ attention.
-</p>
-</div>
-</div>
+.text-block p{
+color:#777;
+margin-bottom:20px;
+}
 
-<div class="service photo">
-<div class="service-content">
-<h3>Photography</h3>
-<p>
-Increase your credibility by getting the most stunning, high-quality photos
-that improve your business image.
-</p>
-</div>
-</div>
+.text-block a{
+font-weight:bold;
+text-decoration:none;
+color:black;
+}
 
-</div>
+.image-block{
+height:500px;
+background-size:cover;
+background-position:center;
+}
 
-<div class="testimonials">
+.egg{
+background-image:url(images/image-transform.jpg);
+}
 
-<h4>CLIENT TESTIMONIALS</h4>
+.cup{
+background-image:url(images/image-stand-out.jpg);
+}
 
-<div class="testimonial-container">
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
 
-<div class="testimonial">
-<img src="images/image-emily.jpg">
-<p>
-We put our trust in Sunnyside and they delivered,
-making sure our needs were met and deadlines were always hit.
-</p>
-<h5>Emily R.</h5>
-<span>Marketing Director</span>
-</div>
+.service{
+height:600px;
+background-size:cover;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+text-align:center;
+padding:60px;
+}
 
-<div class="testimonial">
-<img src="images/image-thomas.jpg">
-<p>
-Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
-success made it a satisfying and enjoyable experience.
-</p>
-<h5>Thomas S.</h5>
-<span>Chief Operating Officer</span>
-</div>
+.graphic{
+background-image:url(images/image-graphic-design.jpg);
+}
 
-<div class="testimonial">
-<img src="images/image-jennie.jpg">
-<p>
-Incredible end result! Our sales increased over 400%
-when we worked with Sunnyside. Highly recommended!
-</p>
-<h5>Jennie F.</h5>
-<span>Business Owner</span>
-</div>
+.photo{
+background-image:url(images/image-photography.jpg);
+}
 
-</div>
-</div>
+.service-content h3{
+font-family:'Fraunces';
+font-size:25px;
+margin-bottom:15px;
+}
 
-<div class="gallery">
+.service-content p{
+max-width:350px;
+margin:auto;
+}
 
-<img src="images/image-gallery-milkbottles.jpg">
-<img src="images/image-gallery-orange.jpg">
-<img src="images/image-gallery-cone.jpg">
-<img src="images/image-gallery-sugarcubes.jpg">
+.testimonials{
+text-align:center;
+padding:120px 80px;
+}
 
-</div>
+.testimonials h4{
+letter-spacing:5px;
+color:#aaa;
+margin-bottom:70px;
+}
 
+.testimonial-container{
+display:flex;
+gap:50px;
+justify-content:center;
+}
 
-<footer>
+.testimonial{
+max-width:300px;
+}
 
-<h2>sunnyside</h2>
+.testimonial img{
+width:70px;
+border-radius:50%;
+margin-bottom:20px;
+}
 
-<ul>
-<li>About</li>
-<li>Services</li>
-<li>Projects</li>
-</ul>
+.testimonial p{
+color:#666;
+margin-bottom:25px;
+}
 
-<div class="social">
-<a href="https://www.facebook.com/sunnyside"> <img src="images/icon-facebook.svg"> </a> 
-<a href="https://www.instagram.com/snnyside"> <img src="images/icon-instagram.svg"> </a>
-<a href="https://www.twitter.com/sunnyside"> <img src="images/icon-twitter.svg"> </a>
-<a href="https://www.pinterest.com/sunnyside"> <img src="images/icon-pinterest.svg"> </a>
-</div>
+.testimonial h5{
+font-family:'Fraunces';
+margin-bottom:5px;
+}
 
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+.testimonial span{
+font-size:14px;
+color:#aaa;
+}
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-</script>
-</footer>
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
 
-</body>
-</html>
+.gallery img{
+width:100%;
+display:block;
+}
+
+footer{
+background:#90d4c5;
+text-align:center;
+padding:60px;
+}
+
+footer h2{
+font-family:'Fraunces';
+margin-bottom:30px;
+}
+
+footer ul{
+display:flex;
+gap:30px;
+justify-content:center;
+list-style:none;
+margin-bottom:30px;
+}
+
+.social img{
+margin:0 10px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.navbar{
+padding:30px 25px;
+}
+
+.menu-toggle{
+display:block;
+cursor:pointer;
+}
+
+.nav-links{
+position:absolute;
+top:100px;
+left:50%;
+transform:translateX(-50%);
+flex-direction:column;
+background:white;
+width:85%;
+padding:40px 0;
+gap:30px;
+display:none;
+}
+
+.nav-links li{
+text-align:center;
+}
+
+.nav-links a{
+color:#777;
+font-weight:600;
+}
+
+.contact{
+background:#ffd600;
+color:black;
+}
+
+.nav-links::before{
+content:"";
+position:absolute;
+top:-20px;
+right:0;
+border-left:20px solid transparent;
+border-bottom:20px solid white;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hero{
+height:90vh;
+}
+
+.hero h1{
+font-size:35px;
+letter-spacing:6px;
+}
+
+.arrow{
+margin-top:60px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.text-block{
+padding:70px 30px;
+text-align:center;
+}
+
+.text-block h2{
+font-size:28px;
+}
+
+.image-block{
+height:350px;
+}
+
+.egg{
+order:-1;
+}
+
+.cup{
+order:-1;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.service{
+height:550px;
+padding:40px 20px;
+}
+
+.service-content p{
+max-width:300px;
+}
+
+.testimonials{
+padding:80px 30px;
+}
+
+.testimonial-container{
+flex-direction:column;
+align-items:center;
+gap:70px;
+}
+
+.testimonial{
+max-width:320px;
+}
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+footer ul{
+flex-direction:row;
+gap:25px;
+}
+
+}
